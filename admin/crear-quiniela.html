@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Quiniela - QuinielaPro Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-600 to-pink-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                        <i class="fas fa-trophy text-2xl"></i>
+                        <span class="text-xl font-bold">QuinielaPro Admin</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="hover:text-purple-200 transition">
+                        <i class="fas fa-user-shield mr-2"></i>
+                        <span>Admin</span>
+                    </a>
+                    <a href="#" class="hover:text-purple-200 transition">
+                        <i class="fas fa-cog mr-2"></i>
+                        <span>Configuración</span>
+                    </a>
+                    <a href="../index.html" class="hover:text-purple-200 transition">
+                        <i class="fas fa-sign-out-alt mr-2"></i>
+                        <span>Salir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg min-h-screen">
+            <div class="p-6">
+                <div class="flex items-center space-x-3 mb-6 pb-6 border-b">
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user-shield text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">Admin</p>
+                        <p class="text-sm text-gray-500">Administrador</p>
+                    </div>
+                </div>
+                <nav class="space-y-2">
+                    <a href="index.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="crear-quiniela.html" class="flex items-center space-x-3 bg-purple-50 text-purple-600 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-plus-circle"></i>
+                        <span class="font-medium">Crear Quiniela</span>
+                    </a>
+                    <a href="gestionar-quinielas.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-list"></i>
+                        <span>Gestionar Quinielas</span>
+                    </a>
+                    <a href="ingresar-resultados.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-check-square"></i>
+                        <span>Ingresar Resultados</span>
+                    </a>
+                    <a href="usuarios.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-users"></i>
+                        <span>Usuarios</span>
+                    </a>
+                    <a href="reportes.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reportes</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Crear Nueva Quiniela</h1>
+                <p class="text-gray-600">Complete el formulario para crear una nueva quiniela</p>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white rounded-xl shadow-lg">
+                <div class="p-8">
+                    <form>
+                        <!-- Basic Information -->
+                        <div class="mb-8">
+                            <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-info-circle text-purple-600 mr-3"></i>
+                                Información Básica
+                            </h2>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Nombre de la Quiniela *</label>
+                                    <input type="text" placeholder="Ej: Liga MX - Jornada 15" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Deporte *</label>
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                        <option>Seleccionar deporte...</option>
+                                        <option>Fútbol</option>
+                                        <option>NFL</option>
+                                        <option>NBA</option>
+                                        <option>MLB</option>
+                                        <option>NHL</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Descripción</label>
+                                    <textarea rows="3" placeholder="Descripción de la quiniela..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Financial Information -->
+                        <div class="mb-8 pb-8 border-b">
+                            <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-dollar-sign text-purple-600 mr-3"></i>
+                                Información Financiera
+                            </h2>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Precio de Entrada *</label>
+                                    <div class="relative">
+                                        <span class="absolute left-3 top-3 text-gray-500">$</span>
+                                        <input type="number" placeholder="100" class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Premio Total *</label>
+                                    <div class="relative">
+                                        <span class="absolute left-3 top-3 text-gray-500">$</span>
+                                        <input type="number" placeholder="5000" class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Máximo de Participantes</label>
+                                    <input type="number" placeholder="100" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dates -->
+                        <div class="mb-8 pb-8 border-b">
+                            <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-calendar text-purple-600 mr-3"></i>
+                                Fechas
+                            </h2>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Fecha de Inicio *</label>
+                                    <input type="datetime-local" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Fecha de Cierre *</label>
+                                    <input type="datetime-local" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Fecha de Finalización</label>
+                                    <input type="datetime-local" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Matches Section -->
+                        <div class="mb-8">
+                            <div class="flex items-center justify-between mb-6">
+                                <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                                    <i class="fas fa-futbol text-purple-600 mr-3"></i>
+                                    Partidos
+                                </h2>
+                                <button type="button" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                                    <i class="fas fa-plus mr-2"></i>
+                                    Agregar Partido
+                                </button>
+                            </div>
+
+                            <!-- Match 1 -->
+                            <div class="border rounded-lg p-6 mb-4 bg-gray-50">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="font-semibold text-gray-800">Partido 1</h3>
+                                    <button type="button" class="text-red-600 hover:text-red-700">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                                <div class="grid md:grid-cols-3 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Equipo Local *</label>
+                                        <input type="text" placeholder="Nombre del equipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Equipo Visitante *</label>
+                                        <input type="text" placeholder="Nombre del equipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Fecha y Hora *</label>
+                                        <input type="datetime-local" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Match 2 -->
+                            <div class="border rounded-lg p-6 mb-4 bg-gray-50">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="font-semibold text-gray-800">Partido 2</h3>
+                                    <button type="button" class="text-red-600 hover:text-red-700">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                                <div class="grid md:grid-cols-3 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Equipo Local *</label>
+                                        <input type="text" placeholder="Nombre del equipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Equipo Visitante *</label>
+                                        <input type="text" placeholder="Nombre del equipo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Fecha y Hora *</label>
+                                        <input type="datetime-local" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center p-6 border-2 border-dashed border-gray-300 rounded-lg">
+                                <i class="fas fa-plus-circle text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500">Haz clic en "Agregar Partido" para añadir más partidos</p>
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="flex items-center justify-between pt-6 border-t">
+                            <a href="gestionar-quinielas.html" class="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                                Cancelar
+                            </a>
+                            <div class="space-x-4">
+                                <button type="button" class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
+                                    Guardar como Borrador
+                                </button>
+                                <button type="submit" class="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                                    <i class="fas fa-check mr-2"></i>
+                                    Crear Quiniela
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>

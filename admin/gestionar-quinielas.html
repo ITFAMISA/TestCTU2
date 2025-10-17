@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Quinielas - QuinielaPro Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-purple-600 to-pink-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                        <i class="fas fa-trophy text-2xl"></i>
+                        <span class="text-xl font-bold">QuinielaPro Admin</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="hover:text-purple-200 transition">
+                        <i class="fas fa-user-shield mr-2"></i>
+                        <span>Admin</span>
+                    </a>
+                    <a href="#" class="hover:text-purple-200 transition">
+                        <i class="fas fa-cog mr-2"></i>
+                        <span>Configuración</span>
+                    </a>
+                    <a href="../index.html" class="hover:text-purple-200 transition">
+                        <i class="fas fa-sign-out-alt mr-2"></i>
+                        <span>Salir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg min-h-screen">
+            <div class="p-6">
+                <div class="flex items-center space-x-3 mb-6 pb-6 border-b">
+                    <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user-shield text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">Admin</p>
+                        <p class="text-sm text-gray-500">Administrador</p>
+                    </div>
+                </div>
+                <nav class="space-y-2">
+                    <a href="index.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="crear-quiniela.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Crear Quiniela</span>
+                    </a>
+                    <a href="gestionar-quinielas.html" class="flex items-center space-x-3 bg-purple-50 text-purple-600 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-list"></i>
+                        <span class="font-medium">Gestionar Quinielas</span>
+                    </a>
+                    <a href="ingresar-resultados.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-check-square"></i>
+                        <span>Ingresar Resultados</span>
+                    </a>
+                    <a href="usuarios.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-users"></i>
+                        <span>Usuarios</span>
+                    </a>
+                    <a href="reportes.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reportes</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <div class="mb-8 flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2">Gestionar Quinielas</h1>
+                    <p class="text-gray-600">Administra todas las quinielas del sistema</p>
+                </div>
+                <a href="crear-quiniela.html" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition font-semibold">
+                    <i class="fas fa-plus mr-2"></i>
+                    Nueva Quiniela
+                </a>
+            </div>
+
+            <!-- Filters -->
+            <div class="bg-white rounded-xl shadow p-6 mb-8">
+                <div class="grid md:grid-cols-5 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Buscar</label>
+                        <input type="text" placeholder="Nombre de quiniela..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Estado</label>
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            <option>Todos</option>
+                            <option>Activa</option>
+                            <option>En Progreso</option>
+                            <option>Finalizada</option>
+                            <option>Cerrada</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Deporte</label>
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            <option>Todos</option>
+                            <option>Fútbol</option>
+                            <option>NFL</option>
+                            <option>NBA</option>
+                            <option>MLB</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Fecha</label>
+                        <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div class="flex items-end">
+                        <button class="w-full bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                            Filtrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quinielas Table -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-purple-50">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Quiniela</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Deporte</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Participantes</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Premio</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Cierre</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Estado</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Liga MX - Jornada 15</p>
+                                        <p class="text-xs text-gray-500">ID: QUI-2024-015</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-futbol text-blue-500 mr-2"></i>
+                                        Fútbol
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-gray-800">85/100</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-green-600">$5,000</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="text-sm text-gray-700">20/10/2024</p>
+                                    <p class="text-xs text-gray-500">18:00</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Activa</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex space-x-2">
+                                        <button class="text-blue-600 hover:text-blue-700" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="text-purple-600 hover:text-purple-700" title="Ver Detalles">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-red-600 hover:text-red-700" title="Eliminar">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div>
+                                        <p class="font-semibold text-gray-800">NFL - Semana 8</p>
+                                        <p class="text-xs text-gray-500">ID: QUI-2024-014</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-football-ball text-green-500 mr-2"></i>
+                                        NFL
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-gray-800">142/150</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-green-600">$10,000</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="text-sm text-gray-700">22/10/2024</p>
+                                    <p class="text-xs text-gray-500">12:00</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">En Progreso</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex space-x-2">
+                                        <button class="text-blue-600 hover:text-blue-700" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="text-purple-600 hover:text-purple-700" title="Ver Detalles">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-red-600 hover:text-red-700" title="Eliminar">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div>
+                                        <p class="font-semibold text-gray-800">NBA - Jornada 3</p>
+                                        <p class="text-xs text-gray-500">ID: QUI-2024-013</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-basketball-ball text-purple-500 mr-2"></i>
+                                        NBA
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-gray-800">98/120</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-green-600">$7,500</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="text-sm text-gray-700">23/10/2024</p>
+                                    <p class="text-xs text-gray-500">19:00</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Activa</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex space-x-2">
+                                        <button class="text-blue-600 hover:text-blue-700" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="text-purple-600 hover:text-purple-700" title="Ver Detalles">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-red-600 hover:text-red-700" title="Eliminar">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Liga MX - Jornada 14</p>
+                                        <p class="text-xs text-gray-500">ID: QUI-2024-012</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-futbol text-blue-500 mr-2"></i>
+                                        Fútbol
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-gray-800">156/150</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-green-600">$5,000</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="text-sm text-gray-700">12/10/2024</p>
+                                    <p class="text-xs text-gray-500">18:00</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">Finalizada</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex space-x-2">
+                                        <button class="text-purple-600 hover:text-purple-700" title="Ver Detalles">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-green-600 hover:text-green-700" title="Ver Resultados">
+                                            <i class="fas fa-chart-line"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div>
+                                        <p class="font-semibold text-gray-800">NFL - Semana 7</p>
+                                        <p class="text-xs text-gray-500">ID: QUI-2024-011</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="flex items-center text-sm text-gray-700">
+                                        <i class="fas fa-football-ball text-green-500 mr-2"></i>
+                                        NFL
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-gray-800">200/150</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="font-semibold text-green-600">$10,000</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <p class="text-sm text-gray-700">15/10/2024</p>
+                                    <p class="text-xs text-gray-500">12:00</p>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">Finalizada</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex space-x-2">
+                                        <button class="text-purple-600 hover:text-purple-700" title="Ver Detalles">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="text-green-600 hover:text-green-700" title="Ver Resultados">
+                                            <i class="fas fa-chart-line"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-6 bg-gray-50 border-t flex items-center justify-between">
+                    <p class="text-sm text-gray-600">Mostrando 5 de 12 quinielas</p>
+                    <div class="flex space-x-2">
+                        <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-white transition">Anterior</button>
+                        <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>
