@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario - QuinielaPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                        <i class="fas fa-trophy text-2xl"></i>
+                        <span class="text-xl font-bold">QuinielaPro</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="hover:text-blue-200 transition">
+                        <i class="fas fa-user mr-2"></i>
+                        <span>Mi Perfil</span>
+                    </a>
+                    <a href="#" class="hover:text-blue-200 transition">
+                        <i class="fas fa-bell mr-2"></i>
+                        <span>Notificaciones</span>
+                        <span class="bg-red-500 text-xs rounded-full px-2 py-1 ml-1">3</span>
+                    </a>
+                    <a href="../index.html" class="hover:text-blue-200 transition">
+                        <i class="fas fa-sign-out-alt mr-2"></i>
+                        <span>Salir</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg min-h-screen">
+            <div class="p-6">
+                <div class="flex items-center space-x-3 mb-6 pb-6 border-b">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">Usuario Demo</p>
+                        <p class="text-sm text-gray-500">usuario@email.com</p>
+                    </div>
+                </div>
+                <nav class="space-y-2">
+                    <a href="index.html" class="flex items-center space-x-3 bg-blue-50 text-blue-600 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-home"></i>
+                        <span class="font-medium">Inicio</span>
+                    </a>
+                    <a href="quinielas-disponibles.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-list"></i>
+                        <span>Quinielas Disponibles</span>
+                    </a>
+                    <a href="mis-quinielas.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Mis Quinielas</span>
+                    </a>
+                    <a href="resultados.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Resultados</span>
+                    </a>
+                    <a href="historial.html" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-lg transition">
+                        <i class="fas fa-history"></i>
+                        <span>Historial</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Welcome Section -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Bienvenido, Usuario</h1>
+                <p class="text-gray-600">Aquí puedes gestionar todas tus quinielas</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="grid md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-xl shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Quinielas Activas</p>
+                            <p class="text-3xl font-bold text-gray-800">5</p>
+                        </div>
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-file-alt text-blue-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Aciertos</p>
+                            <p class="text-3xl font-bold text-gray-800">23</p>
+                        </div>
+                        <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-check-circle text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Ganancia Total</p>
+                            <p class="text-3xl font-bold text-gray-800">$2,450</p>
+                        </div>
+                        <div class="bg-yellow-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-dollar-sign text-yellow-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-500 text-sm mb-1">Posición</p>
+                            <p class="text-3xl font-bold text-gray-800">#12</p>
+                        </div>
+                        <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-trophy text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="bg-white rounded-xl shadow mb-8">
+                <div class="p-6 border-b">
+                    <h2 class="text-xl font-bold text-gray-800">Acciones Rápidas</h2>
+                </div>
+                <div class="p-6 grid md:grid-cols-3 gap-4">
+                    <a href="quinielas-disponibles.html" class="flex items-center space-x-4 p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition">
+                        <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-plus text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Comprar Quiniela</p>
+                            <p class="text-sm text-gray-500">Ver disponibles</p>
+                        </div>
+                    </a>
+                    <a href="mis-quinielas.html" class="flex items-center space-x-4 p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-green-500 hover:bg-green-50 transition">
+                        <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-edit text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Llenar Quiniela</p>
+                            <p class="text-sm text-gray-500">Editar mis picks</p>
+                        </div>
+                    </a>
+                    <a href="resultados.html" class="flex items-center space-x-4 p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition">
+                        <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-800">Ver Resultados</p>
+                            <p class="text-sm text-gray-500">Consultar ganadores</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recent Quinielas -->
+            <div class="bg-white rounded-xl shadow">
+                <div class="p-6 border-b">
+                    <h2 class="text-xl font-bold text-gray-800">Mis Quinielas Recientes</h2>
+                </div>
+                <div class="p-6">
+                    <!-- Placeholder para quinielas recientes -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 border rounded-lg hover:shadow-md transition">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-futbol text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Quiniela Liga MX - Jornada 15</p>
+                                    <p class="text-sm text-gray-500">Fecha límite: 20/10/2024 18:00</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Pendiente</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 border rounded-lg hover:shadow-md transition">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-football-ball text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Quiniela NFL - Semana 7</p>
+                                    <p class="text-sm text-gray-500">Finalizada - 12 aciertos de 16</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Finalizada</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 border rounded-lg hover:shadow-md transition">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-basketball-ball text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Quiniela NBA - Temporada Regular</p>
+                                    <p class="text-sm text-gray-500">En progreso - 8 aciertos de 10</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">En Progreso</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/user.js"></script>
+</body>
+</html>

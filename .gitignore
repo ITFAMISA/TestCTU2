@@ -1,0 +1,51 @@
+# Dependencias
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Variables de entorno
+.env
+.env.local
+.env.development
+.env.production
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Build y dist
+dist/
+build/
+.cache/
+
+# Archivos temporales
+*.tmp
+.tmp/
+temp/
+
+# Base de datos local
+*.sqlite
+*.db
+
+# Configuración específica del sistema
+.vscode/
+.editorconfig
+
+# Archivos de prueba
+coverage/
+.nyc_output/
+
+# Archivos de sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
